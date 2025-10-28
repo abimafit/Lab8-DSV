@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 8: JavaScript Básico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Laboratorio 8: JavaScript Básico</h1>
+            <p class="subtitle">Universidad Tecnológica de Panamá</p>
+            <p class="subtitle">Facultad de Ingeniería de Sistemas</p>
+            <p class="subtitle">Desarrollo de Software V (8400)</p>
+            <p class="tagline">Resolviendo problemas con JavaScript</p>
+        </header>
+        
+        <div class="content">
+            <!-- Ejercicio 1: Suma de tres valores -->
+            <div class="exercise">
+                <div class="exercise-header">
+                    <div class="exercise-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h2>Suma de tres valores</h2>
+                </div>
+                <p class="exercise-description">Ingresa tres números para calcular su suma:</p>
+                
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="num1">Número 1:</label>
+                        <input type="number" id="num1" placeholder="Ingresa el primer número">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="num2">Número 2:</label>
+                        <input type="number" id="num2" placeholder="Ingresa el segundo número">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="num3">Número 3:</label>
+                        <input type="number" id="num3" placeholder="Ingresa el tercer número">
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button onclick="calcularSuma()">
+                        <i class="fas fa-plus-circle"></i> Calcular Suma
+                    </button>
+                </div>
+                
+                <div class="result" id="resultadoSuma">
+                    <!-- Aquí se mostrará el resultado -->
+                </div>
+            </div>
+            
+            <!-- Ejercicio 2: Cuadrado de un número -->
+            <div class="exercise">
+                <div class="exercise-header">
+                    <div class="exercise-icon">
+                        <i class="fas fa-square"></i>
+                    </div>
+                    <h2>Cuadrado de un número</h2>
+                </div>
+                <p class="exercise-description">Ingresa un número para calcular su cuadrado:</p>
+                
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="numeroCuadrado">Número:</label>
+                        <input type="number" id="numeroCuadrado" placeholder="Ingresa un número">
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button onclick="calcularCuadrado()">
+                        <i class="fas fa-square-root-alt"></i> Calcular Cuadrado
+                    </button>
+                </div>
+                
+                <div class="result" id="resultadoCuadrado">
+                    <!-- Aquí se mostrará el resultado -->
+                </div>
+            </div>
+            
+            <!-- Ejercicio 3: Promedio de calificaciones -->
+            <div class="exercise">
+                <div class="exercise-header">
+                    <div class="exercise-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h2>Promedio de calificaciones</h2>
+                </div>
+                <p class="exercise-description">Ingresa el nombre del estudiante y sus tres calificaciones:</p>
+                
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="nombreEstudiante">Nombre del estudiante:</label>
+                        <input type="text" id="nombreEstudiante" placeholder="Ingresa el nombre">
+                    </div>
+                </div>
+                
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="calificacion1">Calificación 1:</label>
+                        <input type="number" id="calificacion1" placeholder="Primera calificación" min="0" max="20">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="calificacion2">Calificación 2:</label>
+                        <input type="number" id="calificacion2" placeholder="Segunda calificación" min="0" max="20">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="calificacion3">Calificación 3:</label>
+                        <input type="number" id="calificacion3" placeholder="Tercera calificación" min="0" max="20">
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button onclick="calcularPromedio()">
+                        <i class="fas fa-calculator"></i> Calcular Promedio
+                    </button>
+                </div>
+                
+                <div class="result" id="resultadoPromedio">
+                    <!-- Aquí se mostrará el resultado -->
+                </div>
+            </div>
+            
+            <!-- Ejercicio 4: Conversión de unidades -->
+            <div class="exercise">
+                <div class="exercise-header">
+                    <div class="exercise-icon">
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+                    <h2>Conversión de unidades (metros)</h2>
+                </div>
+                <p class="exercise-description">Ingresa una cantidad en metros para convertir a centímetros y kilómetros:</p>
+                
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="metros">Metros:</label>
+                        <input type="number" id="metros" placeholder="Ingresa la cantidad en metros">
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button onclick="convertirUnidades()">
+                        <i class="fas fa-exchange-alt"></i> Convertir
+                    </button>
+                </div>
+                
+                <div class="result" id="resultadoConversion">
+                    <!-- Aquí se mostrará el resultado -->
+                </div>
+            </div>
+            
+            <!-- Ejercicio 5: Comparación de dos valores -->
+            <div class="exercise">
+                <div class="exercise-header">
+                    <div class="exercise-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h2>Comparación de dos valores</h2>
+                </div>
+                <p class="exercise-description">Ingresa dos números para compararlos:</p>
+                
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="valor1">Primer número:</label>
+                        <input type="number" id="valor1" placeholder="Ingresa el primer número">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="valor2">Segundo número:</label>
+                        <input type="number" id="valor2" placeholder="Ingresa el segundo número">
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button onclick="compararValores()">
+                        <i class="fas fa-not-equal"></i> Comparar
+                    </button>
+                </div>
+                
+                <div class="result" id="resultadoComparacion">
+                    <!-- Aquí se mostrará el resultado -->
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Laboratorio 8: JavaScript Básico - Desarrollo de Software V</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
