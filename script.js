@@ -9,19 +9,19 @@
             }, 1000);
         }
 
-        // Ejercicio 1: Suma de tres valores
+        // Ejercicio 1: Suma de tres valores constantes
         function calcularSuma() {
-            // Obtener los valores de los inputs
-            const num1 = parseFloat(document.getElementById('num1').value) || 0;
-            const num2 = parseFloat(document.getElementById('num2').value) || 0;
-            const num3 = parseFloat(document.getElementById('num3').value) || 0;
+            // Valores constantes predefinidos
+            const num1 = 15;
+            const num2 = 23;
+            const num3 = 42;
             
             // Calcular la suma
             const suma = num1 + num2 + num3;
             
             // Mostrar el resultado
             mostrarResultado('resultadoSuma', 
-                `La suma de los valores ingresados es: ${suma}`);
+                `La suma de los valores constantes (${num1}, ${num2}, ${num3}) es: ${suma}`);
         }
         
         // Ejercicio 2: Cuadrado de un número
